@@ -1,0 +1,52 @@
+@import "../../assets/styles/colors";
+@import "../../assets/styles/utilities";
+
+:host {
+  .fa {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .fa-thumbs-up {
+    color: $blue;
+  }
+
+  .fa-thumbs-down {
+    color: $red;
+  }
+
+  .fa:hover {
+    transform: scale(1.2);
+  }
+
+  nav {
+    background: $white;
+
+    .menuItems {
+      list-style: none;
+      display: flex;
+
+      li {
+        a {
+          text-decoration: none;
+          color: $blue;
+          font-size: 24px;
+          font-weight: 400;
+          transition: all .5s ease-in-out;
+          position: relative;
+          text-transform: uppercase;
+
+          &:hover {
+            color: $red;
+
+            &::before {
+              width: 100%;
+              transition: all .5s ease-in-out;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,8 @@
+<ul class="answers-list">
+  <li *ngFor="let answer of answers[0]">
+    <div class="answer-text">
+      <p>{{ answer.text }}</p>
+      <span class="sub-text">{{ answer.timestamp | date:'medium'}}</span>
+    </div>
+  </li>
+</ul>

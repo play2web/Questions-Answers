@@ -1,0 +1,30 @@
+@import "../../assets/styles/colors";
+@import "../../assets/styles/utilities";
+
+:host {
+  .answers-list {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+
+    li {
+      margin: 0;
+    }
+
+    .answer-text {
+      padding: single-px-to-rem(15);
+      background-color: $blue;
+      border-bottom: single-px-to-rem(1) solid $white;
+
+      p {
+        color: $white;
+        margin: 0;
+      }
+    }
+  }
+
+  .sub-text {
+    color: $small;
+    font-size: 11px;
+  }
+}

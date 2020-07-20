@@ -1,0 +1,24 @@
+@import "../../assets/styles/colors";
+@import "../../assets/styles/utilities";
+
+:host {
+  .questions-wrapper {
+    margin: single-px-to-rem(50);
+
+    .question-box {
+      margin-bottom: single-px-to-rem(25);
+    }
+
+    .taskDescription {
+      padding-left: single-px-to-rem(10);
+      margin-top: 0;
+      margin-bottom: 0;
+      padding-top: single-px-to-rem(25);
+      padding-bottom: single-px-to-rem(25);
+      background-color: $red;
+      color: $white;
+    }
+
+  }
+
+}

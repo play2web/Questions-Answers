@@ -1,0 +1,21 @@
+<div class="container">
+  <nav>
+    <ul class="menuItems">
+      <li><a routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
+    </ul>
+  </nav>
+  <h1>{{question.title}}</h1>
+  <p>{{question.description}}</p>
+  <ng-container *ngFor="let answer of question.answers">
+    <p class="answers">{{answer.text}} <i class="fa fa-hand-o-left"
+        (click)="likeDislike($event,answer.id,'fa-thumbs-up')"></i></p>
+  </ng-container>
+  <div class="row">
+    <form [formGroup]="addAnswerForm" (ngSubmit)="addAnwser()">
+      <textarea class="col-10" type="text" rows="20" cols="50" name="expertUserId" formControlName="answer"
+        autocomplete="off"></textarea>
+      <button class="btn blue" id="t-cancel" type="submit" [disabled]="addAnswerForm.invalid">
+        ADD ANSWER</button>
+    </form>
+  </div>
+</div>

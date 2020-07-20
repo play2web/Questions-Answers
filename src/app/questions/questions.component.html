@@ -1,0 +1,9 @@
+<div class="questions-wrapper">
+  <ng-container *ngFor="let question of questionsAndAnswers">
+    <div class="question-box">
+      <p class="taskDescription">{{question.title }} <button class="btn white" (click)="goToTask(question.id)">Go to
+          task</button></p>
+      <app-answers [answers]="question.answers"></app-answers>
+    </div>
+  </ng-container>
+</div>
